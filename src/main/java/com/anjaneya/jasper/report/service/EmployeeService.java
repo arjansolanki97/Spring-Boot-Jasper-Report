@@ -73,9 +73,9 @@ public class EmployeeService {
         Map<String, Object> map = new HashMap<>();
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport,map,dataSource);
 
-        /*JasperExportManager.exportReportToPdfStream(jasperPrint, respo.getOutputStream());
+        JasperExportManager.exportReportToPdfStream(jasperPrint, respo.getOutputStream());
         respo.setContentType("application/pdf");
-        respo.addHeader("Content-Disposition", "attachment; filename=jasper.pdf");*/
+        respo.addHeader("Content-Disposition", "attachment; filename=jasper.pdf");
 
         response.setStatus(HttpStatus.OK.value());
         response.setMessage("PDF generated");
